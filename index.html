@@ -57,8 +57,8 @@ h1 small{display:block;font-size:.42em;color:var(--teal);margin-top:10px;letter-
 .items li>span{display:block;font-weight:400;font-size:.92rem;color:var(--muted)}
 .say{padding:40px 0 70px}
 .notes{display:grid;grid-template-columns:repeat(6,1fr);gap:22px}
-.notes blockquote{margin:0;background:var(--card);border:2px solid var(--line);border-radius:6px;padding:22px}
-.notes blockquote p{margin:0 0 10px}
+.notes>div{margin:0;font-weight:500;font-size:1.1rem;background:var(--card);border:2px solid var(--line);border-radius:6px;padding:22px}
+.notes>div p{margin:0 0 10px}
 .notes .n1{grid-column:1/5}
 .notes .n2{grid-column:5/7;align-self:end}
 .notes .n3{grid-column:1/3}
@@ -77,7 +77,7 @@ footer{padding:24px;text-align:center;color:var(--muted);font-size:.9rem}
  .hero .w,.window .w,.find .w{grid-template-columns:1fr;gap:28px}
  .board{border-radius:6px}
  .notes{grid-template-columns:1fr}
- .notes blockquote{grid-column:auto!important;margin-top:0!important}
+ .notes>div{grid-column:auto!important;margin-top:0!important}
 }
 @media (max-width:640px){
  body{padding-bottom:84px}
@@ -94,8 +94,8 @@ footer{padding:24px;text-align:center;color:var(--muted);font-size:.9rem}
   <div>
    <span class="tag">Drive-thru &middot; Elizabeth, CO</span>
    <h1 id="h" class="slab">Cowgirlz (Cowboy) Coffee Company<small>Barb&rsquo;s window on Highway 86</small></h1>
-   <p class="q">&ldquo;<span data-snippet-of="Rachael Jones">This is THE place you want to stop at for coffee in Elizabeth.</span>&rdquo;</p>
-   <p class="by"><span data-reviewer="Rachael Jones">Rachael J.</span>, Google review</p>
+   <p class="q">Order at the window, say hi to Barb, and get on with your morning.</p>
+   <p class="by">Gluten free pastries and breakfast burritos too.</p>
    <div class="acts">
     <a class="btn" href="tel:+17143172744">Call (714) 317-2744</a>
     <a class="btn alt" href="https://www.google.com/maps/place/Cowgirlz+(Cowboy)+Coffee+Company/@39.3618671,-104.6120726,17z/data=!4m6!3m5!1s0x876cc1f630e4e1b3:0xd262a2dfcc1296ad!8m2!3d39.3618671!4d-104.6120726!16s%2Fg%2F11gy3np4yc" target="_blank" rel="noopener">See us on Google</a>
@@ -125,7 +125,7 @@ footer{padding:24px;text-align:center;color:var(--muted);font-size:.9rem}
   </div>
   <ul class="items">
    <li>Dazbog coffee</li>
-   <li>Chai lattes<span>&ldquo;<span data-snippet-of="Rachael Jones">I got a double dirty chai latte, absolutely delicious.</span>&rdquo;</span></li>
+   <li>Chai lattes<span>dirty chai, too</span></li>
    <li>Smoothies &amp; frapps</li>
    <li>Mames breakfast burritos</li>
    <li>Scones from Bakersway</li>
@@ -136,15 +136,15 @@ footer{padding:24px;text-align:center;color:var(--muted);font-size:.9rem}
 
 <section class="say" aria-labelledby="say-h">
  <div class="w">
-  <h2 id="say-h" class="slab">What the regulars say</h2>
+  <h2 id="say-h" class="slab">Regulars, take note</h2>
   <div class="notes">
-   <blockquote class="n1"><p><span data-review="Rachael Jones">This is THE place you want to stop at for coffee in Elizabeth. Wonderfully made, you can really tell the difference in quality when it is made by someone who cares, and you find that here<br><br>Gluten free breakfast options! And they're actually yummy and satisfying! 😁 I got a breakfast burrito and a lemon poppyseed muffin. The muffin, PHENOMENAL. I am a picky gluten free girlie, this muffin was perfect, not crumbly at all.<br><br>I got a double dirty chai latte, absolutely delicious. The chai has such a beautiful, unique pepperiness, and its not overly sweet. Perfect, no notes.<br><br>You order right at the window, and it is wonderful to chat with the lovely lady running the show. Stopping here was such a wonderful way to start my morning, I'm genuinely in love with this spot, and would order breakfast here every morning if I lived in Elizabeth! Cheers!</span></p><cite><span data-reviewer="Rachael Jones">Rachael J.</span></cite></blockquote>
-   <blockquote class="n2"><p><span data-review="Kami Kugler">Best coffee in Elizabeth! Barb is the best and has great coffee at a reasonable price. By far the most delicious and best in Elizabeth!<br>Happily part of my routine 🤗</span></p><cite><span data-reviewer="Kami Kugler">Kami K.</span></cite></blockquote>
-   <blockquote class="n3"><p><span data-review="Aften Smith">Coffee is amazing. Service is very friendly, knows their customers. Got a muffin &amp; they were so thoughtful of the execution, served cut in 4ths, warmed up, in a small food basket with a fork &amp; napkins.</span></p><cite><span data-reviewer="Aften Smith">Aften S.</span></cite></blockquote>
-   <blockquote class="n4"><p><span data-review="Aaron Gano">Probably one of the best coffee drive through stops I've been to. Privetly owned by a very nice lady who made our coffee perfect. It was a very personable experience. Definitely give it a try.</span></p><cite><span data-reviewer="Aaron Gano">Aaron G.</span></cite></blockquote>
-   <blockquote class="n5"><p><span data-review="Google reviewer (name not shown) #2">Barb is amazing. Not only is she the queen when it comes to quick morning drinks, but she’s also a staple in her community! Have been coming here for the last 6 ish years, definitely forever staying here!</span></p><cite>Google reviewer</cite></blockquote>
+   <div class="n1"><p>Barb remembers your usual.</p></div>
+   <div class="n2"><p>Hot coffee, cold frapps, smoothies.</p></div>
+   <div class="n3"><p>Gluten free? There are real breakfast options here.</p></div>
+   <div class="n4"><p>Open at 5:30 on Mondays.</p></div>
+   <div class="n5"><p>Closed Tuesdays.</p></div>
   </div>
-  <p class="fave"><a href="https://www.google.com/maps/place/Cowgirlz+(Cowboy)+Coffee+Company/@39.3618671,-104.6120726,17z/data=!4m6!3m5!1s0x876cc1f630e4e1b3:0xd262a2dfcc1296ad!8m2!3d39.3618671!4d-104.6120726!16s%2Fg%2F11gy3np4yc" target="_blank" rel="noopener">Read all 156 reviews on Google</a></p>
+  <p class="fave">4.9 stars from 156 Google reviews. <a href="https://www.google.com/maps/place/Cowgirlz+(Cowboy)+Coffee+Company/@39.3618671,-104.6120726,17z/data=!4m6!3m5!1s0x876cc1f630e4e1b3:0xd262a2dfcc1296ad!8m2!3d39.3618671!4d-104.6120726!16s%2Fg%2F11gy3np4yc" target="_blank" rel="noopener">Read them on Google</a></p>
  </div>
 </section>
 
